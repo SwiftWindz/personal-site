@@ -1,182 +1,57 @@
-import React, { useState } from "react";
-import TimelineElement from "./TimelineElement";
+import { earlier, links, paychex } from "../data.js";
 
 export default function Experience() {
-  const [isFolded, setIsFolded] = useState(false);
-
   return (
-    <div id="experience" className=" flex flex-row">
-      <div className="flex-row w-full">
-        <div className="flex">
-          <button
-            onClick={() => {
-              setIsFolded(!isFolded);
-            }}
-          >
-            <h1 className="hover:animate-pulse">{isFolded ? "[+]" : "[-]"}</h1>
-          </button>
-          <div id="home" className="hover:animate-pulse flex text-xl">
-            <p>[E]</p>
-            <p className="hover:animate-pulse text-[#A7C080]">xperience</p>
-          </div>
-        </div>
-        <div
-          className={
-            (isFolded ? "hidden " : "") + "flex flex-col bg-[#272e33] mt-1"
-          }
-        >
-          <div className="m-2">
-            <ol className="border-l border-neutral-300 dark:border-neutral-500">
-            <TimelineElement
-                date={"Jan 2025 - present"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                    Part Time Software Engineer at{" "}
-                    <a
-                      href="https://www.paychex.com/"
-                      className="text-[#D699b6] font-bold hover:opacity-50"
-                    >
-                      Paychex
-                    </a>
-                  </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    I returned to Paychex as a part-time software
-                    engineer a few months after completing my second
-                    university co-op. Rejoining the same team, I continue
-                    to work on previous projects while also taking on new responsibilities.
-                  </p>
-                }
-            ></TimelineElement>
-            <TimelineElement
-                date={"Oct 2024 - Jan 2025"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                    Part Time Software Engineer at{" "}
-                    <a
-                      href="https://bryx.com/"
-                      className="text-[#D699b6] font-bold hover:opacity-50"
-                    >
-                      Bryx
-                    </a>
-                  </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    Worked part-time as a software engineer at Bryx, a company specializing in
-                    technology solutions for emergency services. Contributed to maintaining and
-                    enhancing their cloud infrastructure.
-                  </p>
-                }
-              ></TimelineElement>
-              <TimelineElement
-                date={"Jan 2024 - Aug 2024"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                    University Co-op with{" "}
-                    <a
-                      href="https://www.paychex.com/"
-                      className="text-[#D699b6] font-bold hover:opacity-50"
-                    >
-                      Paychex
-                    </a>
-                  </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    For my second university co-op I was employed by Paychex as
-                    a software engineer intern. Paychex is a company that
-                    specializes in payroll and HR solutions. Over the course of
-                    my stay with Paychex, I had the privilege of working with
-                    two fantastic agile teams specializing in DevOps and
-                    internal software development. My personal focus was feature
-                    development and maintenance of testing and quality assurance
-                    software that services approximately 160 agile teams.
-                  </p>
-                }
-              ></TimelineElement>
-              <TimelineElement
-                date={"Jun 2023 - Dec 2024"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                    Promoted to Head Undergraduate Teaching Assistant at the{" "}
-                    <a
-                      href="https://www.rit.edu/"
-                      className="text-[#D699b6] font-bold hover:opacity-50"
-                    >
-                    Rochester Institute of Technology
-                    </a>
-                  </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    My responsibilities as a course assistant were elevated to
-                    include assisting in creating and proof reading course
-                    material, including exams and homeworks, and assisting and
-                    guiding ~30 other course assistants. At the time of my hire,
-                    I also assisted in creating content for a new course at RIT,
-                    GCIS-127.
-                  </p>
-                }
-              ></TimelineElement>
-              <TimelineElement
-                date={"Jan 2023 - Aug 2023"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                    University Co-op with{" "}
-                    <a
-                      href="https://measuresforjustice.org/"
-                      className="text-[#D699b6] font-bold hover:opacity-50"
-                    >
-                      Measures for Justice
-                    </a>
-                  </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    For my first university co-op I was employed by Measures for
-                    Justice as a software engineer intern. Measures for Justice
-                    is an organisation whose goal is to make criminal justice
-                    data more accessable and understandable. My primary focus
-                    was maintaining their data pipeline through targeted code
-                    changes with the Kotlin programming language.
-                  </p>
-                }
-              ></TimelineElement>
-              <TimelineElement
-                date={"Aug 2021 - Dec 2022"}
-                title={
-                  <h4 className="mb-1.5 text-xl font-semibold">
-                  Undergraduate Teaching Assistant at the{" "}
-                  <a
-                    href="https://www.rit.edu/"
-                    className="text-[#D699b6] font-bold hover:opacity-50"
-                  >
-                  Rochester Institute of Technology
-                  </a>
-                </h4>
-                }
-                description={
-                  <p className="mb-3 text-[#B8B8B8]">
-                    Became employed by my university as an undergraduate
-                    teaching assistant for the university intro programming
-                    courses, GCIS-123 and GCIS-124. I directly assisted in 
-                    classroom instruction through one-on-ones with students 
-                    and by grading homework assignments and exams.
-                  </p>
-                }
-              ></TimelineElement>
-            </ol>
-            <a
-              className="text-[#D699b6] font-bold hover:opacity-50"
-              href="./Resume.pdf"
-            >
-              View Full Résumé
-            </a>
-          </div>
-        </div>
+    <section id="experience" aria-labelledby="exp-h" className="flex flex-col gap-8 border-t border-line py-12 md:gap-10 md:py-16">
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 id="exp-h" className="section-title">
+          <span className="text-accent">[E]</span>xperience
+        </h2>
+        <a href={links.resume} className="py-3 font-mono text-[15px] text-accent hover:text-bright">
+          Full résumé (PDF) →
+        </a>
       </div>
-    </div>
+
+      <div className="flex flex-col gap-6 rounded-[10px] border border-line bg-surface p-5 md:gap-7 md:p-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+          <h3 className="m-0 text-[22px] font-bold text-bright md:text-[26px]">
+            <a href={paychex.url} className="hover:text-white">{paychex.name}</a>
+          </h3>
+          <p className="m-0 font-mono text-sm text-muted">
+            {paychex.dates} · {paychex.location}
+          </p>
+        </div>
+        <ol className="m-0 flex list-none flex-col border-l-2 border-line2 p-0">
+          {paychex.roles.map((r) => (
+            <li key={r.role} className="flex flex-wrap gap-x-8 gap-y-1.5 pb-6 pl-4 pt-1 last:pb-1 md:pl-6">
+              <div className="flex min-w-0 flex-[999_1_480px] flex-col gap-1.5">
+                <h4 className={`m-0 text-[17px] font-semibold md:text-[19px] ${r.current ? "text-accent" : "text-bright"}`}>
+                  {r.role}
+                </h4>
+                <p className="m-0 max-w-[680px] text-[15px] leading-relaxed text-body md:text-base">{r.desc}</p>
+              </div>
+              <p className="order-first m-0 basis-full font-mono text-[13px] text-muted md:order-none md:basis-[200px] md:pt-1 md:text-sm">
+                {r.date}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <h3 className="label m-0 mb-2 font-medium">Earlier</h3>
+        <ul className="m-0 flex list-none flex-col p-0">
+          {earlier.map((e) => (
+            <li key={e.org} className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-b border-surface2 py-3.5">
+              <span className="text-[15px] text-fg md:text-[17px]">
+                {e.role} <span className="text-muted">·</span>{" "}
+                <span className="font-semibold text-bright">{e.org}</span>
+              </span>
+              <span className="font-mono text-sm text-muted">{e.date}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
