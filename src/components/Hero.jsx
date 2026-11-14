@@ -26,7 +26,11 @@ export default function Hero() {
           </p>
           <p className="m-0 text-muted">
             Away from the keyboard, I'm outside, reading, playing video games, making music, or taking too many photos
-            of Margo, my corgi, and{" "}
+            of{" "}
+            <a href="/margo.jpg" className="text-fg underline decoration-line2 underline-offset-4 hover:text-bright">
+              Margo
+            </a>
+            , my corgi, and{" "}
             <a href="/tan.jpeg" className="text-fg underline decoration-line2 underline-offset-4 hover:text-bright">
               Tangerine
             </a>
