@@ -1,28 +1,27 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./src/**/*.{html,js,jsx}"],
-    theme: {
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  theme: {
     extend: {
-      'animation': {
-        'text':'text 5s ease infinite',
-      },
-      'keyframes': {
-          'text': {
-              '0%, 100%': {
-                'background-size':'200% 200%',
-                  'background-position': 'left center'
-              },
-              '50%': {
-                'background-size':'200% 200%',
-                  'background-position': 'right center'
-              }
-          },
+      colors: {
+        // Everforest (dark)
+        bg: "#1E2326",
+        surface: "#272E33",
+        surface2: "#2E383C",
+        line: "#374145",
+        line2: "#414B50",
+        edge: "#4F5B58",
+        fg: "#D3C6AA",
+        bright: "#F2EFDF",
+        muted: "#9DA9A0",
+        body: "#B5B9A8",
+        accent: "#A7C080",
       },
       fontFamily: {
-        code: "'Fira Code', sans-serif",
-      }
+        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"],
+      },
     },
   },
   plugins: [],
-}
-
+};
